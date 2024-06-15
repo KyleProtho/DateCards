@@ -44,15 +44,18 @@ const set3 = [
 ];
 
 const questionSets = [set1, set2, set3];
+const headers = ["First Date", "Second Date", "Third Date"];
 let currentSet = 0;
 let currentQuestionIndex = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
     const questionElement = document.getElementById("question");
+    const headerElement = document.getElementById("header");
     const nextButton = document.getElementById("next-button");
 
     function updateQuestion() {
         questionElement.textContent = questionSets[currentSet][currentQuestionIndex];
+        headerElement.textContent = headers[currentSet];
     }
 
     nextButton.addEventListener("click", () => {
