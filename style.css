@@ -56,7 +56,14 @@ header h1 {
     color: #333;
 }
 
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
 .button {
+    flex: 1;
     padding: 10px 20px;
     font-size: 18px;
     color: white;
