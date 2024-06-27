@@ -90,3 +90,18 @@ header h1 {
     letter-spacing: 1px;
     align-items: center;
 }
+
+/* Progress bar styles */
+.progress-container {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#progress-bar {
+    height: 10px;
+    background-color: #4caf50;
+    width: 0%;
+    border-radius: 5px;
+}

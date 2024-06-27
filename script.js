@@ -53,36 +53,44 @@ document.addEventListener("DOMContentLoaded", () => {
     const headerElement = document.getElementById("header");
     const nextButton = document.getElementById("next-button");
     const previousButton = document.getElementById("previous-button");
-
+    const progressBar = document.getElementById("progress-bar");
+  
     function updateQuestion() {
-        questionElement.textContent = questionSets[currentSet][currentQuestionIndex];
-        headerElement.textContent = headers[currentSet];
+      questionElement.textContent = questionSets[currentSet][currentQuestionIndex];
+      headerElement.textContent = headers[currentSet];
+  
+      // Calculate progress within current set
+      const currentSetLength = questionSets[currentSet].length;
+      const progress = (currentQuestionIndex + 1) / currentSetLength * 100;
+  
+      // Update progress bar
+      progressBar.style.width = `${progress}%`;
     }
-
+  
     nextButton.addEventListener("click", () => {
-        currentQuestionIndex++;
-        if (currentQuestionIndex >= questionSets[currentSet].length) {
-            currentQuestionIndex = 0;
-            currentSet++;
-            if (currentSet >= questionSets.length) {
-                currentSet = 0; // Loop back to the first set if needed
-            }
+      currentQuestionIndex++;
+      if (currentQuestionIndex >= questionSets[currentSet].length) {
+        currentQuestionIndex = 0;
+        currentSet++;
+        if (currentSet >= questionSets.length) {
+          currentSet = 0; // Loop back to the first set if needed
         }
-        updateQuestion();
+      }
+      updateQuestion();
     });
-
+  
     previousButton.addEventListener("click", () => {
-        currentQuestionIndex--;
-        if (currentQuestionIndex < 0) {
-            currentSet--;
-            if (currentSet < 0) {
-                currentSet = questionSets.length - 1; // Loop back to the last set if needed
-            }
-            currentQuestionIndex = questionSets[currentSet].length - 1;
+      currentQuestionIndex--;
+      if (currentQuestionIndex < 0) {
+        currentSet--;
+        if (currentSet < 0) {
+          currentSet = questionSets.length - 1; // Loop back to the last set if needed
         }
-        updateQuestion();
+        currentQuestionIndex = questionSets[currentSet].length - 1;
+      }
+      updateQuestion();
     });
-
+  
     // Initialize with the first question
     updateQuestion();
 });
