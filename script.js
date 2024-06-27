@@ -4,12 +4,12 @@ const set1 = [
     "When did you last sing to yourself? To someone else?",  // A bit personal but not too intrusive
     "Would you like to be famous? In what way?",  // Aspirations
     "If you could wake up tomorrow having gained any one quality or ability, what would it be?",  // Hopes and dreams
-    "What would constitute a 'perfect' day for you?",  // Personal preferences
-    "Do you have a secret hunch about how you will die?",  // More personal and introspective
-    "For what in your life do you feel most grateful?",  // Core values and gratitude
-    "If you could change anything about the way you were raised, what would it be?",  // Childhood and upbringing
-    "If you were able to live to the age of 90 and retain either the mind or body of a 30-year-old for the last 60 years of your life, which would you want?",  // Philosophical question
     "Take four minutes and tell your partner your life story in as much detail as possible.",  // Deep dive into life story
+    "Do you have a secret hunch about how you will die?",  // More personal and introspective
+    "If you could change anything about the way you were raised, what would it be?",  // Childhood and upbringing
+    "For what in your life do you feel most grateful?",  // Core values and gratitude
+    "If you were able to live to the age of 90 and retain either the mind or body of a 30-year-old for the last 60 years of your life, which would you want?",  // Philosophical question
+    "What would constitute a 'perfect' day for you?",  // Personal preferences
     "Name three things you and your partner appear to have in common."  // Wrap-up question after learning about each other
 ];
 
@@ -20,11 +20,11 @@ const set2 = [
     "Is there something that you’ve dreamed of doing for a long time? Why haven’t you done it?",  // Dreams and aspirations
     "What is the greatest accomplishment of your life?",  // Achievements
     "What is your most treasured memory?",  // Positive memories
+    "What is your most terrible memory?",  // More personal and introspective
     "How do you feel about your relationship with your mother?",  // Family relationships
     "How close and warm is your family? Do you feel your childhood was happier than most other people’s?",  // Family dynamics
     "If a crystal ball could tell you the truth about yourself, your life, the future or anything else, what would you want to know?",  // Intriguing and personal
     "If you knew that in one year you would die suddenly, would you change anything about the way you are now living? Why?",  // Philosophical and personal
-    "What is your most terrible memory?",  // More personal and introspective
     "Alternate sharing something you consider a positive characteristic of your partner. Share a total of five items."  // Wrap-up with positive interaction
 ];
 
