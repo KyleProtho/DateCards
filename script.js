@@ -44,7 +44,7 @@ const set3 = [
 ];
 
 const questionSets = [set1, set2, set3];
-const headers = ["First Date", "Second Date", "Third Date"];
+const headers = ["Set #1 of 3", "Set #2 of 3", "Set #3 of 3"];
 let currentSet = 0;
 let currentQuestionIndex = 0;
 
