@@ -57,14 +57,27 @@ document.addEventListener("DOMContentLoaded", () => {
   
     function updateQuestion() {
       questionElement.textContent = questionSets[currentSet][currentQuestionIndex];
-      headerElement.textContent = headers[currentSet];
-  
+    
       // Calculate progress within current set
       const currentSetLength = questionSets[currentSet].length;
       const progress = (currentQuestionIndex + 1) / currentSetLength * 100;
-  
+      
       // Update progress bar
       progressBar.style.width = `${progress}%`;
+      
+      // Update set chips
+      updateSetChips();
+    }
+
+    function updateSetChips() {
+      const chips = document.querySelectorAll('.set-chip');
+      chips.forEach((chip, index) => {
+          if (index === currentSet) {
+              chip.classList.add('active');
+          } else {
+              chip.classList.remove('active');
+          }
+      });
     }
   
     nextButton.addEventListener("click", () => {
@@ -90,7 +103,18 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       updateQuestion();
     });
-  
-    // Initialize with the first question
+
+    const setChips = document.querySelectorAll('.set-chip');
+    setChips.forEach(chip => {
+        chip.addEventListener('click', () => {
+            currentSet = parseInt(chip.dataset.set);
+            currentQuestionIndex = 0;
+            updateQuestion();
+        });
+    });
+
+    // Initialize with the first question and set chip
     updateQuestion();
+    updateSetChips();
+
 });

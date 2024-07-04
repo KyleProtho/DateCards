@@ -52,26 +52,28 @@ header h1 {
 
 .question {
     font-size: 18px;
-    margin: 20px 0;
+    margin: 40px 0; /* Changed from 20px to 30px */
     color: #333;
-}
-
-.button-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
 }
 
 .button {
     flex: 1;
-    padding: 10px 20px;
-    font-size: 18px;
+    padding: 8px 16px; /* Reduced from 10px 20px */
+    font-size: 16px; /* Reduced from 18px */
     color: white;
     background-color: #a83232;
     border: none;
-    border-radius: 25px;
+    border-radius: 20px; /* Reduced from 25px for a slightly smaller look */
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 200px; /* Added to limit the width */
+    margin: 0 auto; /* Center the buttons if they don't take full width */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Changed from space-between to center */
+    gap: 20px; /* Increased gap for better separation */
 }
 
 .button:hover {
@@ -90,6 +92,33 @@ header h1 {
     letter-spacing: 1px;
     align-items: center;
 }
+
+
+/* Chips for sets */
+.set-selector {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px; /* Increased from 20px to 30px */
+}
+
+.set-chip {
+    flex: 1;
+    margin: 0 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #a83232;
+    background-color: white;
+    border: 1px solid #a83232;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.set-chip.active {
+    color: white;
+    background-color: #a83232;
+}
+
 
 /* Progress bar styles */
 .progress-container {
